@@ -1,0 +1,135 @@
+body,
+html {
+  height: 100vh;
+  overflow: -moz-scrollbars-none;
+  -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+  width: 0px; /* remove scrollbar space */
+  background: transparent;
+}
+body {
+  font-family: "Karla", sans-serif;
+  margin: 0;
+  overflow: auto;
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
+  grid-template-rows: 20% auto;
+  grid-template-areas:
+    "GSTN-Filters MainAreaHeaders Other-Filters"
+    "GSTN-Filters MainArea Other-Filters";
+}
+
+.box1 {
+  grid-area: GSTN-Filters;
+  background-color: rgb(243, 243, 236);
+  margin-top: -1.4rem;
+}
+.client-area {
+  background-color: #3700b3;
+  color: white;
+  padding: 0;
+  height: 5.5vh;
+  padding: 20px;
+}
+.box2 {
+  grid-area: MainAreaHeaders;
+}
+.box2-header-buffer {
+  background-color: #3700b3;
+  height: 3vh;
+  color: white;
+}
+.box2-1 {
+  background-color: white;
+  color: #3700b3;
+  position: -webkit-sticky;
+  position: sticky;
+  top: -0.8rem;
+  z-index: 50;
+  margin-top: -5.4rem;
+}
+.box2-heading {
+  text-indent: 15px;
+  padding: 15px;
+  margin: 0%;
+  background-color: #6200ee;
+  color: white;
+}
+.box2-1-tabs {
+  display: flex;
+  margin: 0%;
+  box-shadow: 0px 0px 7px 0px rgba(117, 117, 117, 0.4);
+}
+.cards {
+  grid-area: MainArea;
+  overflow: auto;
+  overflow: -moz-scrollbars-none;
+}
+.boxtab {
+  flex: 1;
+  background-color: white;
+  color: blue;
+  text-align: center;
+  height: 8vh;
+  border-bottom: 0px solid blue;
+  transition: 0.5s ease all 0.3s;
+}
+
+.box3 {
+  grid-area: Other-Filters;
+  background-color: rgb(243, 243, 236);
+  margin-top: -1.4rem;
+}
+
+.cards {
+  padding: 5px;
+}
+.card {
+  background: white;
+  border-radius: 0.7rem;
+  padding: 10px;
+  width: 97%;
+  /* width: 36rem; */
+  position: relative;
+  box-shadow: 0px 0px 7px 0px rgba(117, 117, 117, 0.4);
+  transition: 0.27s;
+}
+
+.card.elderChildren {
+  pointer-events: none;
+  background: white;
+  border-radius: 0.7rem;
+  z-index: -10;
+  /* width: 36rem; */
+  position: relative;
+  box-shadow: 1px 1px 3px 1px rgba(117, 117, 117, 0.4);
+  transition: 0.27s;
+}
+
+.card:hover {
+  transform: translateY(-0.7rem);
+}
+
+/* .card:not(:first-child) {
+  margin-top: -5.4rem;
+} */
+.card.main {
+  transform: translateY(-0.3rem);
+  z-index: 30;
+  box-shadow: 1px 0px 100px 15px rgba(116, 116, 116, 0.4);
+  transition-timing-function: cubic-bezier(0.2, 0, 0.8, 1);
+  /* border-bottom-style: solid; */
+}
+.card.children {
+  transform: translateY(6.3rem);
+  z-index: -10;
+  transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
+  box-shadow: 1px 1px 10px 1px rgba(117, 117, 117, 0.4);
+}
+
+.boxtab.selected {
+  background-color: rgba(41, 4, 250, 0.1);
+  border-bottom: 5px solid blue;
+  transition: 0.3s ease all;
+}

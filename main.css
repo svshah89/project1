@@ -4,10 +4,7 @@ html {
   overflow: -moz-scrollbars-none;
   -ms-overflow-style: none;
 }
-::-webkit-scrollbar {
-  width: 0px; /* remove scrollbar space */
-  background: transparent;
-}
+
 body {
   font-family: "Karla", sans-serif;
   margin: 0;

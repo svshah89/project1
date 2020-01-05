@@ -127,9 +127,3 @@ body {
   transition-timing-function: cubic-bezier(0.2, 0, 0, 1);
   box-shadow: 1px 1px 10px 1px rgba(117, 117, 117, 0.4);
 }
-
-.boxtab.selected {
-  background-color: rgba(41, 4, 250, 0.1);
-  border-bottom: 5px solid blue;
-  transition: 0.3s ease all;
-}
